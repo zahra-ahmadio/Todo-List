@@ -1,0 +1,12 @@
+.app {
+  background-color: lightblue;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 500px;
+  border-style: solid;
+  flex-direction: column;
+
+
+}
