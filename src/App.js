@@ -1,17 +1,24 @@
 import React, {useState} from 'react';
-import data from './data.json';
-import Header from './Header';
-import ToDoList from "./ToDoList";
 import './App.css';
+ //importing componant
+import Form from "./componant/Form";
+import ToDoList from "./componant/ToDoList";
+
 
 function App (){
-    const [toDoList, setToDoList] = useState(data);
 
-  return(
-      <div className="app">
-          <Header/>
-          <ToDoList toDoList={toDoList}/>
-      </div>
-  );
+const [inputText, setInputText]=useState("");
+const [todos, setTodos]=useState([]);
+
+    return (
+        <div className="app">
+            <header>
+                <h1>zahra's  todo list  </h1>
+
+            </header>
+        <Form inputext={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} />
+             <ToDoList />
+       </div>
+    );
 }
 export default App;
