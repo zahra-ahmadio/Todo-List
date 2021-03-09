@@ -9,6 +9,9 @@ function App (){
 
 const [inputText, setInputText]=useState("");
 const [todos, setTodos]=useState([]);
+const [status, setStatus]=useState('all');
+const [filteredTodos, setFilteredTodos]=useState([]);
+
 
     return (
         <div className="app">
@@ -16,8 +19,13 @@ const [todos, setTodos]=useState([]);
                 <h1>zahra's  todo list  </h1>
 
             </header>
-        <Form inputext={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} />
-             <ToDoList />
+        <Form
+            inputText={inputText}
+            todos={todos} setTodos={setTodos}
+            setInputText={setInputText}
+            setStatus={setStatus}
+        />
+             <ToDoList setTodos={setTodos} todos={todos}/>
        </div>
     );
 }

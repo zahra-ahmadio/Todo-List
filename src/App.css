@@ -17,7 +17,7 @@ header, body{
   align-items: center;
 color: white;
 }
-form{
+form {
   display: flex;
   justify-content: center;
 }
@@ -35,6 +35,7 @@ select{
   background-image: none;
 }
 .select{
+  width: 7vw;
   margin: 1rem;
   position: relative;
   overflow: hidden;
@@ -53,21 +54,67 @@ select{
   text-decoration: line-through;
   opacity: 0.5;
 }
+.complete-btn{
+  background: rgb(11,212,162);
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+
+}
+.trash-btn{
+  background: red;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+
+
+}
 html,body{
   min-height: 100%;
 }
+.filter-todo{
+  display: flex;
+  padding: 1rem;
+}
 .todo li{
-  flex:1;
+  flex: 2;
+  width: 10vw;
 }
 .todo{
-  margin: 0.5rem;
-  background: white;
-  color: black;
-  font-size: 1.5re;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
   transition: all 1s ease;
+}
+.todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list{
+  min-width:30%;
+  list-style: none;
+}
+.todo-item{
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check{
+  pointer-events: none ;
+  color: white;
+}
+.fa-plus:hover{
+  color: white;
+  transition: all 0.3s ease;
+}
+.fall{
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
 }
 form button{
   color: #ff861c;
@@ -87,25 +134,36 @@ form button{
   background: white;
 }
 select{
+  padding: 0.5rem;
+  /*font-size: 2rem;*/
+  border: none;
+  background: white;
+}
+select{
   display: flex;
   flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
   background: white;
 }
 form button:hover{
   background: #ff6f47;
   color: white;
 }
-.todo-button{}
+.todo-button{
+  color: #ff6f47 !important;
+
+}
 .app {
-  display:flex;
-  flex-direction: column;
-  justify-content:center;
-  /*align-self:center;*/
-  align-items:center;
-  /*width: 50vw;*/
-  height: 500px;
-  border-style: solid;
-  width: 30vw;
+  /*display:flex;*/
+  /*flex-direction: column;*/
+  /*justify-content:center;*/
+  /*!*align-self:center;*!*/
+  /*align-items:center;*/
+  /*!*width: 50vw;*!*/
+  /*height: 500px;*/
+  /*border-style: solid;*/
+  /*width: 30vw;*/
 
 }
 
